@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.Advertisements;
 
 public class RocketController : MonoBehaviour
 {
@@ -20,7 +21,7 @@ public class RocketController : MonoBehaviour
 
     private Animation anim;
     private AudioSource audioSource;
-
+   
     void Start()
     {
         anim = this.GetComponent<Animation>();
@@ -31,7 +32,9 @@ public class RocketController : MonoBehaviour
         UpdatePosition();
         // Set obstacles speed.
         UpdateObstaclesSpeed(speed);
+
     }
+
 
     void Update()
     {
@@ -125,6 +128,7 @@ public class RocketController : MonoBehaviour
                 part.gameObject.SetActive(partAdded);
             }
         }
+
     }
 
     // Update player position.
